@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-// import jwtDecode from 'jwt-decode';
+import jwtDecode from 'jwt-decode';
 // import axios from 'axios';
 // import { render } from 'react-dom';
 // import { Switch, Route } from 'react-router-dom';
 // import { Redirect } from 'react-router';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
+import Logout from './components/Logout/Logout';
 
 
 class App extends Component {
@@ -16,12 +17,12 @@ class App extends Component {
 
      
      componentDidMount() {
-      //  const jwt= localStorage.getItem('token');
-      //   try{
-      //     const user = jwtDecode(jwt)
-      //   }catch{
+       const jwt= localStorage.getItem('token');
+        try{
+          const user = jwtDecode(jwt)
+        }catch{
 
-      //   }
+        }
   }
 
 
@@ -31,6 +32,7 @@ class App extends Component {
       <div className = "App">
         <Login />
         <Register />
+        <Logout />
             {/* <NavBar className="navbar" user = {user}/>    */}
             {/* <Switch>
                 <Route

@@ -7,11 +7,7 @@ class Register extends Component {
       lastName:'',
       userName:'',
       password:'',
-      userEmail:'',
-      password:'',
-      addressLine1:'',
-      city:'',
-      state:'',
+      userEmail:''
      }
 
   handleChange=(event) =>{
