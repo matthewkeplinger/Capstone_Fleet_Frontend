@@ -16,7 +16,7 @@ class Register extends Component {
     });
   };
 
-  //once the form is submitted, an object is created. The values on the left should match the name of the rows in the table
+  //create user in DB
   handleSubmit=(event) =>{
     let aUser ={
       'first_name' : this.state.firstName,
@@ -25,7 +25,7 @@ class Register extends Component {
       'password': this.state.password,
       'email': this.state.userEmail
     }  
-    // The object we created is then passed into a function where we post the new user to the user table
+    // Post user to DB via function, axios call
       this.addNewUser(aUser)
   };
 
