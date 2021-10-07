@@ -12,6 +12,8 @@ class Services extends Component {
     componentDidMount(){
         this.getAllServices();
     }
+
+    //Get all services from DB and display in table for user with appropriate headers
     async getAllServices() {
         let response = await axios.get('http://127.0.0.1:8000/api/services/all/');
         this.setState({
@@ -28,7 +30,7 @@ class Services extends Component {
                         <tr>
                             <th>Service Type:</th>
                             <th>Cost:</th>
-                            <th>Rec. Svc. Interval:</th>
+                            <th>Service Interval:</th>
                             <th>Part Used:</th>
                         </tr>
                     </thead>
