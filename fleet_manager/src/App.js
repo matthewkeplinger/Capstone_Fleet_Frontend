@@ -1,62 +1,53 @@
 import React, { Component } from 'react';
 import jwtDecode from 'jwt-decode';
-// import axios from 'axios';
-// import { render } from 'react-dom';
-// import { Switch, Route } from 'react-router-dom';
-// import { Redirect } from 'react-router';
+import { render } from 'react-dom';
+import { Switch, Route } from 'react-router-dom';
+import { Redirect } from 'react-router';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
-import Logout from './components/Logout/Logout';
 import Services from './components/Services/Services';
-import AddService from './components/Services/AddService';
+import NavBar from './components/NavBar/NavBar';
+import Home from './components/Home/Home';
+
 
 class App extends Component {
     state = { 
       user: ''
      }
-
-
      
      componentDidMount() {
        const jwt= localStorage.getItem('token');
         try{
           const user = jwtDecode(jwt)
+          this.setState({user});
         }catch{
 
         }
   }
 
   render() { 
-    //const user = this.state.user;
+    const user = this.state.user;
     return ( 
+      
       <div className = "App">
-        
-        {/* <Login />
-        <Register />
-        <Logout /> */}
-        <Services />
-        {/* <AddService /> */}
-            {/* <NavBar className="navbar" user = {user}/>    */}
-            {/* <Switch>
+            <NavBar user = {user}/>   
+            <Switch>
                 <Route
                 path ='/home'
                 render = {props => {
                     if (!user){
                         return <Redirect to ="/login"/>
                     }else{
-                        return <Home {...props} user = {user} />
+                        return <Services />
                     }
                 }}
                 />
-                {/* <Route path="/products" render={props => <ProductList {...props} user={this.state.user}/>}/>
+                {/* <Route path="/garage" render={props => <ProductList {...props} user={this.state.user}/>}/> */}
                 <Route path="/login" component={Login}/>
                 <Route path="/register" component={Register}/>
-                <Route path="/user_home" component={BuyerHome}/>
-                <Route path="/productsform" component={ProductsForm}/>
-                <Route path="/product_description" component={ProductDescription}/>
-                <Route path="/shopping_cart" render={props => <ShoppingCart {...props} user={this.state.user}/>}/>
-                <Route path="/checkout" component={CheckOut}/> */}
-            {/* </Switch> */} 
+                <Route path="/services" component={Services}/>
+
+            </Switch> 
         </div>
         )
     }

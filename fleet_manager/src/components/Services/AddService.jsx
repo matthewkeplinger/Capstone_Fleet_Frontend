@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
+
 class AddService extends Component {
     constructor(props) {
         super(props);
@@ -34,7 +35,8 @@ class AddService extends Component {
       };
     
       async addNewService(newService){
-        await axios.post(`http://127.0.0.1:8000/api/services/`, newService).then(response => {alert("Service Added to Available Services List")})
+        const jwt= localStorage.getItem('token');
+        await axios.post(`http://127.0.0.1:8000/api/services/`, newService, { headers: {Authorization: 'Bearer ' + jwt}}).then(response => {alert("Service Added to Available Services List")})
       }
     render() { 
         return ( 
@@ -42,7 +44,7 @@ class AddService extends Component {
                 <ul>
                     <form className="form" onSubmit={this.handleSubmit}>
                     <ul><label>Service Type</label></ul>
-                    <input name="serviceType" onChange={this.handleChange} value={this.state.serviceType}/>
+                    <input name="serviceName" onChange={this.handleChange} value={this.state.serviceName}/>
                     <ul><label>Service Cost</label></ul>
                     <input name="serviceCost" onChange={this.handleChange} value={this.state.serviceCost}/>
                     <ul><label>Parts Used</label></ul>
