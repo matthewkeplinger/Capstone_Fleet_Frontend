@@ -25,7 +25,7 @@ class App extends Component {
 
 
   render() { 
-    const user = this.state.user;
+    //const user = this.state.user;
     return ( 
       <div className = "App">
         <Login />
