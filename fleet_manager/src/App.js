@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 // import { Switch, Route } from 'react-router-dom';
 // import { Redirect } from 'react-router';
 import Login from './components/Login/Login';
+import Register from './components/Register/Register';
 
 
 class App extends Component {
@@ -29,6 +30,7 @@ class App extends Component {
     return ( 
       <div className = "App">
         <Login />
+        <Register />
             {/* <NavBar className="navbar" user = {user}/>    */}
             {/* <Switch>
                 <Route
