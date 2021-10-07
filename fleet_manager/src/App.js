@@ -8,7 +8,6 @@ import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import Logout from './components/Logout/Logout';
 
-
 class App extends Component {
     state = { 
       user: ''
