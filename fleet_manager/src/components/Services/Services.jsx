@@ -27,7 +27,6 @@ class Services extends Component {
         return (
             
             <div>
-                <AddService/>
                 <table>
                     <thead>
                         <tr>
@@ -50,7 +49,7 @@ class Services extends Component {
                         })}
                     </tbody>
                 </table>
-               
+                <AddService/>
             </div>
         );
     }
