@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import AddService from './AddService';
 
 class Services extends Component {
     constructor(props) {
@@ -24,7 +25,9 @@ class Services extends Component {
 
     render() { 
         return (
+            
             <div>
+                <AddService/>
                 <table>
                     <thead>
                         <tr>
@@ -46,7 +49,8 @@ class Services extends Component {
                             );
                         })}
                     </tbody>
-                </table>    
+                </table>
+               
             </div>
         );
     }

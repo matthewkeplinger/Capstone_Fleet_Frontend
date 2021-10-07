@@ -8,6 +8,7 @@ import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import Logout from './components/Logout/Logout';
 import Services from './components/Services/Services';
+import AddService from './components/Services/AddService';
 
 class App extends Component {
     state = { 
@@ -29,10 +30,12 @@ class App extends Component {
     //const user = this.state.user;
     return ( 
       <div className = "App">
-        <Services />
+        
         {/* <Login />
         <Register />
         <Logout /> */}
+        <Services />
+        {/* <AddService /> */}
             {/* <NavBar className="navbar" user = {user}/>    */}
             {/* <Switch>
                 <Route
