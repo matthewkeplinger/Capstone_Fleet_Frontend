@@ -7,7 +7,7 @@ const NavBar = ({user}) => {
   return ( 
     <nav className="navigationWrapper">
       <div class="logoWrapper">
-      <span class="stylish">Shade Tree Garage</span>
+      <span class="stylish">My Garage Tracker</span>
       
   </div>
   <ul class="navigation">
