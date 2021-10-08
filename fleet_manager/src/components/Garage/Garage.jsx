@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import AddVehicle from '../AddVehicle/AddVehicle';
 
 
 class Garage extends Component {
@@ -57,6 +58,7 @@ class Garage extends Component {
                         })}
                     </tbody>
                 </table>
+                <AddVehicle/>
             </div>
         );
     }
