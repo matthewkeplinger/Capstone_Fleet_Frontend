@@ -9,6 +9,7 @@ import Services from './components/Services/Services';
 import NavBar from './components/NavBar/NavBar';
 import Home from './components/Home/Home';
 import Garage from './components/Garage/Garage';
+import VehicleDetails from './components/VehicleDetail/VehicleDetail';
 
 
 class App extends Component {
@@ -48,6 +49,7 @@ class App extends Component {
                 <Route path="/login" component={Login}/>
                 <Route path="/register" component={Register}/>
                 <Route path="/services" component={Services}/>
+                <Route path="/vehicle_details" component={VehicleDetails}/>
 
             </Switch> 
         </div>
