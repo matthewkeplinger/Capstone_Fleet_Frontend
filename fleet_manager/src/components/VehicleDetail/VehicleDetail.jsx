@@ -14,9 +14,9 @@ function VehicleDetails(props) {
                 <div>
                     {props.location.state.vehicles.map((element) =>
                     <>
-                    <h3>Make: {element.make}</h3>
-                    <h3>Model:{element.model}</h3>
-                    <h3>Year: {element.year}</h3>
+                    <h3>Vehicle: {element.year} {element.make} {element.model}</h3>
+                    <h4>VIN: {element.VIN}</h4>
+                    <h4>Mileage: {element.mileage}</h4>
                     <Link to = {{pathname: '/garage'}}> Back to Garage </Link>
 
                     </>)}

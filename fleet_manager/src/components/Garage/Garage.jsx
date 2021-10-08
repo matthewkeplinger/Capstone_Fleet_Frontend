@@ -32,9 +32,7 @@ class Garage extends Component {
                 <table>
                     <thead>
                         <tr>
-                            <th>Make</th>
-                            <th>Model</th>
-                            <th>Year</th>
+                            <th>Vehicle</th>
                             <th>Color</th>
                             <th>Mileage</th>
                             <th>License Plate</th>
@@ -46,9 +44,7 @@ class Garage extends Component {
                         {this.state.vehicles.map((vehicle)=> {
                             return (
                                 <tr key = {vehicle.id}>
-                                    <td>{vehicle.make}</td>
-                                    <td>{vehicle.model}</td>
-                                    <td>{vehicle.year}</td>
+                                    <td>{vehicle.year} {vehicle.make} {vehicle.model}</td>
                                     <td>{vehicle.color}</td>
                                     <td>{vehicle.mileage}</td>
                                     <td>{vehicle.license_plate}</td>
