@@ -47,13 +47,19 @@ class Login extends Component {
     }
 
   render(){
+
     return (
-        <div>
-            <form onSubmit={this.handleSubmit}>
-                <input type="text" name="username" placeholder="Username" onChange = {this.handleChange} value= {this.state.username} />
-                <input name="password" type="password" placeholder="Password" onChange = {this.handleChange} value={this.state.password} />
-                <input type="submit" value="Login" class="btn btn-primary" />
-            </form>
+        <div class="card text-white bg-secondary mb-3" style= {{maxWidth: 480}}>
+            <div class="card-header"><h4 class = "card-title">Welcome to My Garage Assistant!</h4></div>
+            <div class="card-body">
+                <h4 class = 'card-title'>Please Log In </h4>
+                <form onSubmit={this.handleSubmit}>
+                    <input type="text" name="username" placeholder="Username" onChange = {this.handleChange} value= {this.state.username} />
+                    <input name="password" type="password" placeholder="Password" onChange = {this.handleChange} value={this.state.password} />
+                    
+                    <input type="submit" value="Login" class="btn btn-primary" />
+                </form>
+            </div>
         </div>
 
     )

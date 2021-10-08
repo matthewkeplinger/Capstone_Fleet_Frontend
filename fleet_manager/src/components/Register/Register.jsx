@@ -36,22 +36,28 @@ class Register extends Component {
 
   render() { 
     return ( 
-    <ul>
-      <form className="form" onSubmit={this.handleSubmit}>
-      <li><label>First Name</label></li>
-      <input name="firstName" onChange={this.handleChange} value={this.state.firstName}/>
-      <li><label>Last Name</label></li>
-      <input name="lastName" onChange={this.handleChange} value={this.state.lastName}/>
-      <li><label>Username</label></li>
-      <input name="userName" onChange={this.handleChange} value={this.state.userName}/>
-      <li><label>Password</label></li>
-      <input name="password" onChange={this.handleChange} value={this.state.password}/>
-      <li><label>Email</label></li>
-      <input name="userEmail" onChange={this.handleChange} value={this.state.userEmail}/>
+      <div class="card text-white bg-secondary mb-3" style= {{maxWidth: 320}}>
+          <div class="card-header"><h4 class = "card-title">Register for an Account</h4></div>
+            <div class="card-body">
+            <ul>
+                  <form className="form" onSubmit={this.handleSubmit}>
+                  <li><label>First Name</label></li>
+                  <input name="firstName" onChange={this.handleChange} value={this.state.firstName}/>
+                  <li><label>Last Name</label></li>
+                  <input name="lastName" onChange={this.handleChange} value={this.state.lastName}/>
+                  <li><label>Username</label></li>
+                  <input name="userName" onChange={this.handleChange} value={this.state.userName}/>
+                  <li><label>Password</label></li>
+                  <input name="password" onChange={this.handleChange} value={this.state.password}/>
+                  <li><label>Email</label></li>
+                  <input name="userEmail" onChange={this.handleChange} value={this.state.userEmail}/>
+                  <br /><br />
+                  <button type = "submit">Create account</button>
+                  </form>
+                </ul>
+            </div>  
+      </div>
 
-      <button type = "submit">Create account</button>
-      </form>
-      </ul>
      );
   }
 }
