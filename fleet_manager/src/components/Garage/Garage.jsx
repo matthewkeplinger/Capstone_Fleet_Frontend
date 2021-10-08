@@ -29,21 +29,21 @@ class Garage extends Component {
     render() { 
         return (
             <div>
-                <table>
+                <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>Vehicle</th>
-                            <th>Color</th>
-                            <th>Mileage</th>
-                            <th>License Plate</th>
-                            <th>VIN</th>
-                            <th>Maintenance Cost to date</th>
+                            <th scope = 'col'>Vehicle</th>
+                            <th scope = 'col'>Color</th>
+                            <th scope = 'col'>Mileage</th>
+                            <th scope = 'col'>License Plate</th>
+                            <th scope = 'col'>VIN</th>
+                            <th scope = 'col'>Maintenance Cost to date</th>
                         </tr>
                     </thead>
                     <tbody>
                         {this.state.vehicles.map((vehicle)=> {
                             return (
-                                <tr key = {vehicle.id}>
+                                <tr class = "table-primary" key = {vehicle.id}>
                                     <td>{vehicle.year} {vehicle.make} {vehicle.model}</td>
                                     <td>{vehicle.color}</td>
                                     <td>{vehicle.mileage}</td>

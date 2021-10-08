@@ -27,19 +27,19 @@ class Services extends Component {
         return (
             
             <div>
-                <table>
+                <table class = "table table-hover">
                     <thead>
                         <tr>
-                            <th>Service Type:</th>
-                            <th>Cost:</th>
-                            <th>Service Interval:</th>
-                            <th>Part Used:</th>
+                            <th scope = 'col'>Service Type:</th>
+                            <th scope = 'col'>Cost:</th>
+                            <th scope = 'col'>Service Interval:</th>
+                            <th scope = 'col'>Part Used:</th>
                         </tr>
                     </thead>
                     <tbody>
                         {this.state.services.map((service)=> {
                             return (
-                                <tr key = {service.id}>
+                                <tr class = "table-primary" key = {service.id}>
                                     <td>{service.service_type}</td>
                                     <td>{service.service_cost}</td>
                                     <td>{service.mileage_interval}</td>
