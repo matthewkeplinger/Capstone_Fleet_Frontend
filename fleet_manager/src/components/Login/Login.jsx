@@ -49,7 +49,7 @@ class Login extends Component {
   render(){
 
     return (
-        <div class="card text-white bg-secondary mb-3" style= {{maxWidth: 480}}>
+        <div class="card text-white bg-secondary mb-3" style= {{maxWidth: 480, justifyContent:'center',alignContent:'center'}}>
             <div class="card-header"><h4 class = "card-title">Welcome to My Garage Assistant!</h4></div>
             <div class="card-body">
                 <h4 class = 'card-title'>Please Log In </h4>

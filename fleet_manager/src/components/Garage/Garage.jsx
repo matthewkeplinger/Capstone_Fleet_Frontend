@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import AddVehicle from '../AddVehicle/AddVehicle';
 import { Link } from 'react-router-dom';
 
 
@@ -33,7 +32,6 @@ class Garage extends Component {
                     <thead>
                         <tr>
                             <th scope = 'col'>Vehicle</th>
-                            <th scope = 'col'>Color</th>
                             <th scope = 'col'>Mileage</th>
                             <th scope = 'col'>License Plate</th>
                             <th scope = 'col'>VIN</th>
@@ -45,7 +43,6 @@ class Garage extends Component {
                             return (
                                 <tr class = "table-primary" key = {vehicle.id}>
                                     <td>{vehicle.year} {vehicle.make} {vehicle.model}</td>
-                                    <td>{vehicle.color}</td>
                                     <td>{vehicle.mileage}</td>
                                     <td>{vehicle.license_plate}</td>
                                     <td>{vehicle.VIN}</td>

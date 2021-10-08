@@ -8,7 +8,7 @@ function VehicleDetails(props) {
 
 
     return (
-        <div class="card text-white bg-primary mb-3">
+        <div class="card text-white bg-primary mb-3" style= {{maxWidth: 650}}>
             <div class = "card-header">
                 <div class = "card-body">
                     {props.location.state.vehicles.map((element) =>
@@ -16,6 +16,7 @@ function VehicleDetails(props) {
                     <h4>Vehicle: {element.year} {element.make} {element.model}</h4>
                     <h4>VIN: {element.VIN}</h4>
                     <h4>Mileage: {element.mileage}</h4>
+                    <h4>Color: {element.color}</h4>
                     <h3>Services Required: </h3>
                     <h3>Services Performed:</h3>
                     <Link to = {{pathname: '/garage'}}> Back to Garage </Link>

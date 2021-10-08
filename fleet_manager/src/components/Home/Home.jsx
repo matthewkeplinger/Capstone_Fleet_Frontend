@@ -6,7 +6,6 @@ function Home () {
   return ( 
     <div>
       <h1> My Garage </h1>
-      <Garage />
     </div>
    );
 }
