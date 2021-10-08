@@ -50,13 +50,14 @@ class Garage extends Component {
                                     <td>{vehicle.license_plate}</td>
                                     <td>{vehicle.VIN}</td>
                                     <td>{vehicle.maintenance_cost}</td>
-                                    <td><Link class = "button_slide slide_left" to = {{pathname: '/vehicle_details', state: {vehicles: [vehicle]}}}>Vehicle Details Page </Link></td>
-                                </tr>    
+                                    <td><Link to = {{pathname: '/vehicle_details', state: {vehicles: [vehicle]}}}>Vehicle Details Page </Link></td>
+                                </tr>
+
                             );
                         })}
                     </tbody>
                 </table>
-                <AddVehicle/>
+                <Link to = {{pathname: '/add_vehicle'}}> Add a Vehicle </Link>
             </div>
         );
     }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 
 class AddVehicle extends Component {
@@ -67,6 +68,7 @@ class AddVehicle extends Component {
                     <ul><label>Maint. Cost to date</label></ul>
                     <input name="vehicleMaintCost" onChange={this.handleChange} value={this.state.vehicleMaintCost}/>
                     <ul><button type = "submit">Add Vehicle to my Garage</button></ul>
+                    <ul><Link to = {{pathname: '/garage'}}> Back to Garage </Link></ul>
                     </form>
                 </ul>
             </div>
