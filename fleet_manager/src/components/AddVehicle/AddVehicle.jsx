@@ -48,30 +48,34 @@ class AddVehicle extends Component {
     }
     render() { 
         return ( 
-            <div>
-                <ul>
-                    <form className="form" onSubmit={this.handleSubmit}>
-                    <ul><label>Year</label></ul>
-                    <input name="vehicleYear" onChange={this.handleChange} value={this.state.vehicleYear}/>
-                    <ul><label>Make</label></ul>
-                    <input name="vehicleMake" onChange={this.handleChange} value={this.state.vehicleMake}/>
-                    <ul><label>Model</label></ul>
-                    <input name="vehicleModel" onChange={this.handleChange} value={this.state.vehicleModel}/>
-                    <ul><label>Color</label></ul>
-                    <input name="vehicleColor" onChange={this.handleChange} value={this.state.vehicleColor}/>
-                    <ul><label>License Plate</label></ul>
-                    <input name="vehicleLicensePlate" onChange={this.handleChange} value={this.state.vehicleLicensePlate}/>
-                    <ul><label>Mileage</label></ul>
-                    <input name="vehicleMileage" onChange={this.handleChange} value={this.state.vehicleMileage}/>
-                    <ul><label>VIN (Vehicle ID Number)</label></ul>
-                    <input name="vehicleVIN" onChange={this.handleChange} value={this.state.vehicleVIN}/>
-                    <ul><label>Maint. Cost to date</label></ul>
-                    <input name="vehicleMaintCost" onChange={this.handleChange} value={this.state.vehicleMaintCost}/>
-                    <ul><button type = "submit">Add Vehicle to my Garage</button></ul>
-                    <ul><Link to = {{pathname: '/garage'}}> Back to Garage </Link></ul>
-                    </form>
-                </ul>
-            </div>
+          <div class="card text-white bg-secondary mb-3" style= {{maxWidth: 340}}>
+            <div class="card-header"><h4 class = "card-title">Add a Vehicle</h4></div>
+              <div class="card-body">
+                  <ul class="list-group">
+                      <form className="form" onSubmit={this.handleSubmit}>
+                        <li><label>Year</label></li>
+                          <input name="vehicleYear" onChange={this.handleChange} value={this.state.vehicleYear}/>
+                        <li><label>Make</label></li>
+                          <input name="vehicleMake" onChange={this.handleChange} value={this.state.vehicleMake}/>
+                        <li><label>Model</label></li>
+                          <input name="vehicleModel" onChange={this.handleChange} value={this.state.vehicleModel}/>
+                        <li><label>Color</label></li>
+                          <input name="vehicleColor" onChange={this.handleChange} value={this.state.vehicleColor}/>
+                        <li><label>License Plate</label></li>
+                          <input name="vehicleLicensePlate" onChange={this.handleChange} value={this.state.vehicleLicensePlate}/>
+                        <li><label>Mileage</label></li>
+                          <input name="vehicleMileage" onChange={this.handleChange} value={this.state.vehicleMileage}/>
+                        <li><label>VIN (Vehicle ID Number)</label></li>
+                          <input name="vehicleVIN" onChange={this.handleChange} value={this.state.vehicleVIN}/>
+                        <li><label>Maint. Cost to date</label></li>
+                          <input name="vehicleMaintCost" onChange={this.handleChange} value={this.state.vehicleMaintCost}/>
+                        <br /><br />
+                        <ul><button type = "submit" class = "btn btn-success">Add Vehicle to my Garage</button></ul>
+                        <li class="list-group-item d-flex justify-content-between align-items-center"><Link to = {{pathname: '/garage'}}> Back to Garage </Link></li>
+                      </form>
+                  </ul>
+              </div>
+          </div>
          );
     }
 }

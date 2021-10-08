@@ -39,8 +39,10 @@ class AddService extends Component {
     }
     render() { 
         return ( 
-            <div>
-                <ul>
+          <div class="card text-white bg-secondary mb-3" style= {{maxWidth: 270}}>
+            <div class="card-header"><h4 class = "card-title">Add a Vehicle</h4></div>
+              <div class="card-body">
+                  <ul class="list-group">
                     <form className="form" onSubmit={this.handleSubmit}>
                     <ul><label>Service Type</label></ul>
                     <input name="serviceName" onChange={this.handleChange} value={this.state.serviceName}/>
@@ -54,6 +56,7 @@ class AddService extends Component {
                     </form>
                 </ul>
             </div>
+          </div>
          );
     }
 }
