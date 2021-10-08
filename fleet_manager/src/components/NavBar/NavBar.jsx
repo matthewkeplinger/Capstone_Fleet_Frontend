@@ -5,19 +5,19 @@ import Logout from "../Logout/Logout";
 
 const NavBar = ({user}) => {
   return ( 
-    <nav className="navigationWrapper">
-      <div class="logoWrapper">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
       <span class="stylish">My Garage Tracker</span>
       
   </div>
-  <ul class="navigation">
+  <ul class="navbar-nav me-auto">
       {user &&
           <React.Fragment>
             <Link to = '/garage'>
-              <li class="parent" >My Garage</li>
+              <li class="nav-item" >My Garage</li>
             </Link> 
             <Link to = '/services'>
-              <li class="parent">Services</li>
+              <li class="nav-item">Services</li>
             </Link>  
             {/* <Link to = '/shopping_cart'>
               <li class="parent">ShoppingCart</li>
@@ -29,10 +29,10 @@ const NavBar = ({user}) => {
         <React.Fragment>
           
             <Link to = '/register'>
-              <li class="parent" >Register</li>
+              <li class="nav-item" >Register</li>
             </Link>  
             <Link to = '/Login'>
-              <li class="parent">Login</li>
+              <li class="nav-item">Login</li>
             </Link>
 
         </React.Fragment>  
