@@ -14,9 +14,9 @@ const NavBar = ({user}) => {
       {user &&
           <React.Fragment>
             <h4>Welcome {user.username}!     </h4>
-            {/* <Link to = '/garage'>
+            <Link to = '/home'>
               <li class="parent" >My Garage</li>
-            </Link>  */}
+            </Link> 
             <Link to = '/services'>
               <li class="parent">Services</li>
             </Link>  

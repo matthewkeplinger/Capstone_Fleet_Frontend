@@ -1,10 +1,12 @@
 import React from "react";
+import Garage from "../Garage/Garage";
 
 
 function Home () {
   return ( 
     <div>
-      <h1> Personal Maintenance Tracker </h1>
+      <h1> My Garage </h1>
+      <Garage />
     </div>
    );
 }

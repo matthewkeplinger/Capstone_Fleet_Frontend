@@ -38,11 +38,12 @@ class App extends Component {
                     if (!user){
                         return <Redirect to ="/login"/>
                     }else{
-                        return <Services />
+                        return <Home />
                     }
                 }}
                 />
                 {/* <Route path="/garage" render={props => <ProductList {...props} user={this.state.user}/>}/> */}
+                <Route path="/home" component={Home}/>
                 <Route path="/login" component={Login}/>
                 <Route path="/register" component={Register}/>
                 <Route path="/services" component={Services}/>
