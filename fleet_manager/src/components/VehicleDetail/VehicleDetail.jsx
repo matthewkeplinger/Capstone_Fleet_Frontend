@@ -1,13 +1,9 @@
 import React from 'react';
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ServiceRecords from '../ServiceRecords/ServiceRecords';
 
 //Pull Vehicle info from garage to populate Vehicle Data
 function VehicleDetails(props) {
-    const [vehicles, setVehicle] = useState([''])
-
-
     return (
         <div class="card text-white bg-primary mb-3" style= {{maxWidth: 650}}>
             <div class = "card-header">

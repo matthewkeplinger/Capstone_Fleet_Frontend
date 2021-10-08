@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import jwtDecode from 'jwt-decode';
-import { render } from 'react-dom';
+// import { render } from 'react-dom';
 import { Switch, Route } from 'react-router-dom';
 import { Redirect } from 'react-router';
 import Login from './components/Login/Login';

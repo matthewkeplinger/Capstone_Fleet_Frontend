@@ -1,5 +1,5 @@
 import React from "react";
-import Garage from "../Garage/Garage";
+// import Garage from "../Garage/Garage";
 
 
 function Home () {
