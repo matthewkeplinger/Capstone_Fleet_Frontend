@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import ServiceRecords from '../ServiceRecords/ServiceRecords';
 
 //Pull Vehicle info from garage to populate Vehicle Data
 function VehicleDetails(props) {
@@ -19,6 +20,7 @@ function VehicleDetails(props) {
                     <h4>Color: {element.color}</h4>
                     <h3>Services Required: </h3>
                     <h3>Services Performed:</h3>
+                    <ServiceRecords/>
                     <Link to = {{pathname: '/garage'}}> Back to Garage </Link>
                     </>)}
                 </div>

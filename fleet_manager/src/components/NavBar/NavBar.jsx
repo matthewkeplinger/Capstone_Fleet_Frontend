@@ -7,9 +7,8 @@ const NavBar = ({user}) => {
   return ( 
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container-fluid">
-      <span class="stylish">My Garage Tracker</span>
-      
-  </div>
+          <span class="stylish">Exhausted Auto, your personal Auto Assistant</span>
+      </div>
   <ul class="navbar-nav me-auto">
       {user &&
           <React.Fragment>
