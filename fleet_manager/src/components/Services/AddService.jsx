@@ -40,7 +40,7 @@ class AddService extends Component {
     render() { 
         return ( 
           <div class="card text-white bg-secondary mb-3" style= {{maxWidth: 270}}>
-            <div class="card-header"><h4 class = "card-title">Add a Vehicle</h4></div>
+            <div class="card-header"><h4 class = "card-title">Add a Service</h4></div>
               <div class="card-body">
                   <ul class="list-group">
                     <form className="form" onSubmit={this.handleSubmit}>
