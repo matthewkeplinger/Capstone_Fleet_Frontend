@@ -8,6 +8,7 @@ import Register from './components/Register/Register';
 import Services from './components/Services/Services';
 import NavBar from './components/NavBar/NavBar';
 import Home from './components/Home/Home';
+import Garage from './components/Garage/Garage';
 
 
 class App extends Component {
@@ -42,7 +43,7 @@ class App extends Component {
                     }
                 }}
                 />
-                {/* <Route path="/garage" render={props => <ProductList {...props} user={this.state.user}/>}/> */}
+                <Route path="/garage" component={Garage}/>
                 <Route path="/home" component={Home}/>
                 <Route path="/login" component={Login}/>
                 <Route path="/register" component={Register}/>

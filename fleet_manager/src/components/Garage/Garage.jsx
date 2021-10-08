@@ -26,7 +26,6 @@ class Garage extends Component {
 
     render() { 
         return (
-            
             <div>
                 <table>
                     <thead>

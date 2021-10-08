@@ -13,8 +13,9 @@ const NavBar = ({user}) => {
   <ul class="navigation">
       {user &&
           <React.Fragment>
-            <h4>Welcome {user.username}!     </h4>
-            <Link to = '/home'>
+            <h2>Welcome {user.username}!</h2>
+            <h4>Please use the navigation bar to see your garage, a list of services, or log out </h4>
+            <Link to = '/garage'>
               <li class="parent" >My Garage</li>
             </Link> 
             <Link to = '/services'>
