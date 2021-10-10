@@ -11,8 +11,8 @@ function VehicleDetails(props) {
                 <div class = "card-body">
                     {props.location.state.vehicles.map((element) =>
                     <>
+                    <h4>{element.year} {element.make} {element.model}</h4>
                     <ImageUploader />
-                    <h4>Vehicle: {element.year} {element.make} {element.model}</h4>
                     <h4>VIN: {element.VIN}</h4>
                     <h4>Mileage: {element.mileage}</h4>
                     <h4>Color: {element.color}</h4>
