@@ -5,8 +5,8 @@ import {Image} from 'cloudinary-react';
 function ImageUploader() {
     const [imageSelected, setImageSelected] = useState("");
 
-    const uploadImage = (files) => {
-        const formData = new formData();
+    const uploadImage = () => {
+        const formData = new FormData();
         formData.append("file", imageSelected);
         formData.append("upload_preset", "qoc0z1eq")
 
@@ -21,11 +21,11 @@ function ImageUploader() {
                 setImageSelected(event.target.files[0]);
             }}
             />
-            <button onClick={uploadImage}>Upload Image</button>
+            <button type="button" class = "btn btn-link" onClick={uploadImage}>Upload Image</button>
 
             {/* Could move this to vehicle Details; use URL as constant; add ID to DB;   */}
             {/* const imgURL = "" */}
-            <Image cloudName="dj6u5jy2g" publicId = ""/>
+            <Image style={{ width:560 }} cloudName="dj6u5jy2g" publicId = "https://res.cloudinary.com/dj6u5jy2g/image/upload/v1633893960/abqavjsh6nhwliqshybs.jpg"/>
         </div>
     )
 }
