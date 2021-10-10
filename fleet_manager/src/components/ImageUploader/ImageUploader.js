@@ -1,29 +1,32 @@
-import React, { Component } from 'react';
+import React , { useState }from 'react';
 import axios from 'axios';
+import {Image} from 'cloudinary-react';
 
-class ImageUploader extends Component {
-    state = {
-        selectedFile: null
-    }
+function ImageUploader() {
+    const [imageSelected, setImageSelected] = useState("");
 
-    fileSelectedHandler = event => {
-        this.setState({
-            selectedFile: event.target.files[0]
-        })
-    }
+    const uploadImage = (files) => {
+        const formData = new formData();
+        formData.append("file", imageSelected);
+        formData.append("upload_preset", "qoc0z1eq")
 
-    fileUploadHandler = event => {
-        axios.post('');
-    }
-    render() { 
-        return (
-            <div>
-                <input type="file" onChange = {this.fileSelectedHandler}/>
-                <button onClick={this.fileUploadHandler}>Upload Image</button>
-            </div>
-            
-          );
-    }
+        axios.post(
+            "https://api.cloudinary.com/v1_1/dj6u5jy2g/image/upload", formData).then((response) => {
+                console.log(response);
+        });
+    };
+    return (
+        <div>
+            <input type = "file" onChange = {(event) =>{
+                setImageSelected(event.target.files[0]);
+            }}
+            />
+            <button onClick={uploadImage}>Upload Image</button>
+
+            {/* Could move this to vehicle Details; use URL as constant; add ID to DB;   */}
+            {/* const imgURL = "" */}
+            <Image cloudName="dj6u5jy2g" publicId = ""/>
+        </div>
+    )
 }
- 
 export default ImageUploader;

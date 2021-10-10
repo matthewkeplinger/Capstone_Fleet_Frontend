@@ -70,7 +70,6 @@ class AddVehicle extends Component {
                         <li><label>Maint. Cost to date</label></li>
                           <input name="vehicleMaintCost" onChange={this.handleChange} value={this.state.vehicleMaintCost}/>
                           <li><label>Image of Vehicle</label></li>
-                          <ImageUploader />
                         <br /><br />
                         <ul><button type = "submit" class = "btn btn-success">Add Vehicle to my Garage</button></ul>
                         <li class="list-group-item d-flex justify-content-between align-items-center"><Link to = {{pathname: '/garage'}}> Back to Garage </Link></li>
