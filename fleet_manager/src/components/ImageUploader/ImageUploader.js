@@ -25,7 +25,7 @@ function ImageUploader() {
 
             {/* Could move this to vehicle Details; use URL as constant; add ID to DB;   */}
             {/* const imgURL = "" */}
-            <Image style={{ width:560 }} cloudName="dj6u5jy2g" publicId = "https://res.cloudinary.com/dj6u5jy2g/image/upload/v1633893960/abqavjsh6nhwliqshybs.jpg"/>
+            <Image style={{ width:560 }} cloudName="dj6u5jy2g" publicId = "https://res.cloudinary.com/dj6u5jy2g/image/upload/v1633894555/yyzgvnnpydlnzkjtecme.jpg"/>
         </div>
     )
 }

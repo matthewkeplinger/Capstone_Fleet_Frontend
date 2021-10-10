@@ -19,7 +19,7 @@ const NavBar = ({user}) => {
             </Link> 
             <Link to = '/services'>
               <button type="button" class = "btn btn-link">
-                <li class="nav-item">Services</li>
+                <li class="nav-item">Vehicle Services</li>
               </button>
             </Link>  
             {/* <Link to = '/shopping_cart'>
