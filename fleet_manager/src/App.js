@@ -6,7 +6,7 @@ import { Redirect } from 'react-router';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import Services from './components/Services/Services';
-import AddService from './components/Services/Services';
+import AddService from './components/Services/AddService';
 import NavBar from './components/NavBar/NavBar';
 import Home from './components/Home/Home';
 import Garage from './components/Garage/Garage';
@@ -48,13 +48,13 @@ class App extends Component {
                 }}
                 />
                 <Route exact path="/garage" component={Garage}/>
-                <Route path="/add_vehicle" component={AddVehicle}/>
-                <Route path="/add_service" component={AddService}/>
-                <Route path="/home" component={Home}/>
-                <Route path="/login" component={Login}/>
-                <Route path="/register" component={Register}/>
-                <Route path="/services" component={Services}/>
-                <Route path="/vehicle_details" component={VehicleDetails}/>
+                <Route exact path="/add_vehicle" component={AddVehicle}/>
+                <Route exact path="/add_service" component={AddService}/>
+                <Route exact path="/home" component={Home}/>
+                <Route exact path="/login" component={Login}/>
+                <Route exact path="/register" component={Register}/>
+                <Route exact path="/services" component={Services}/>
+                <Route exact path="/vehicle_details" component={VehicleDetails}/>
             </Switch> 
         </div>
         )
