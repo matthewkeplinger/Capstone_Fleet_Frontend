@@ -55,8 +55,8 @@ class AddService extends Component {
                     <input name="partUsed" onChange={this.handleChange} value={this.state.partUsed}/>
                     <ul><label>Service Interval</label></ul>
                     <input name="serviceInterval" onChange={this.handleChange} value={this.state.serviceInterval}/><br /><br />
-                    <ul><button type = "submit" class = "btn btn-success">Add Service to List</button></ul>
-                    <ul class="list-group-item d-flex justify-content-between align-items-center"><Link to = {{pathname: '/services'}}> Back to Services </Link></ul>
+                    <ul class = "list-group"><button type = "submit" class = "btn btn-success">Add Service to List</button></ul>
+                    <ul class="list-group"><Link to = {{pathname: '/services'}}> Back to Services </Link></ul>
                     </form>
                 </ul>
             </div>

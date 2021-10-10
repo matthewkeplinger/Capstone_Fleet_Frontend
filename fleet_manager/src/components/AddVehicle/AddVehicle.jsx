@@ -71,13 +71,11 @@ class AddVehicle extends Component {
                             <input name="vehicleVIN" onChange={this.handleChange} value={this.state.vehicleVIN}/>
                           <ul><label>Maint. Cost to date</label></ul>
                             <input name="vehicleMaintCost" onChange={this.handleChange} value={this.state.vehicleMaintCost}/>
-                          
-                           <ul> <ImageUploader /> </ul>
-                          <br />
-                          <ul><button type = "submit" class = "btn btn-success">Add Vehicle to Garage</button></ul>
-                          <ul><Link to = {{pathname: '/garage'}}> Back to Garage </Link></ul>
+                          <br /><br />
+                          <ul class = "list-group"><button type = "submit" class = "btn btn-success">Add Vehicle to Garage</button></ul>
+                          <ul class = "list-group"><Link to = {{pathname: '/garage'}}> Back to Garage </Link></ul>
                         </form>
-                        
+
                     </ul>
                 </div>
             </div>
