@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ServiceRecords from '../ServiceRecords/ServiceRecords';
 import ImageUploader from '../ImageUploader/ImageUploader';
+// import { Image } from 'cloudinary-react';
 import './VehicleDetail.css'
 
 //Pull Vehicle info from garage to populate Vehicle Data
