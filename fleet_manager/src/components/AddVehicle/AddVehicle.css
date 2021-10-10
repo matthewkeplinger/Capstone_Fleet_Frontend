@@ -1,4 +1,4 @@
-.wrapperLogin {
+.wrapperAddVehicle {
     width: 100%;
     height: 100%;
     top:50%;
@@ -6,6 +6,6 @@
     align-items: center;
     justify-content: center;
     -ms-transform: translate(-50%, -50%);
-    transform: translate(0%, 70%);
+    transform: translate(0%, 10%);
   }
   

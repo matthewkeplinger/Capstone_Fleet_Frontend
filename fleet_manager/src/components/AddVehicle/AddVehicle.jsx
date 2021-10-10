@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import ImageUploader from '../ImageUploader/ImageUploader';
+import './AddVehicle.css'
 
 class AddVehicle extends Component {
     constructor(props) {
@@ -47,8 +48,9 @@ class AddVehicle extends Component {
         await axios.post(`http://127.0.0.1:8000/api/vehicles/my-garage/`, newVehicle, { headers: {Authorization: 'Bearer ' + jwt}}).then(response => {alert("Vehicle added to Garage!")})
     }
     render() { 
-        return ( 
-          <div class="card text-white bg-secondary mb-3" style= {{maxWidth: 340}}>
+        return (
+          <div class = "wrapperAddVehicle">
+            <div class="card text-white bg-secondary mb-3" style= {{maxWidth: 340}}>
             <div class="card-header"><h4 class = "card-title">Add a Vehicle</h4></div>
               <div class="card-body">
                   <ul class="list-group">
@@ -72,12 +74,13 @@ class AddVehicle extends Component {
                           <li><label>Image of Vehicle</label></li>
                         <br /><br />
                         <ul><button type = "submit" class = "btn btn-success">Add Vehicle to my Garage</button></ul>
-                        <li class="list-group-item d-flex justify-content-between align-items-center"><Link to = {{pathname: '/garage'}}> Back to Garage </Link></li>
+                        <ul class="list-group-item d-flex justify-content-between align-items-center"><Link to = {{pathname: '/garage'}}> Back to Garage </Link></ul>
                       </form>
                       
                   </ul>
               </div>
           </div>
+          </div> 
          );
     }
 }

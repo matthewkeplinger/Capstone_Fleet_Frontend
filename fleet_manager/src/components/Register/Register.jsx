@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React,{ Component} from 'react';
+import './Register.css'
 
 class Register extends Component {
     state = { 
@@ -36,7 +37,8 @@ class Register extends Component {
 
   render() { 
     return ( 
-      <div class="card text-white bg-secondary mb-3" style= {{maxWidth: 320}}>
+      <div class = "wrapper">
+          <div class="card text-white bg-secondary mb-3" style= {{maxWidth: 320}}>
           <div class="card-header"><h4 class = "card-title">Register for an Account</h4></div>
             <div class="card-body">
             <ul>
@@ -56,7 +58,9 @@ class Register extends Component {
                   </form>
                 </ul>
             </div>  
+          </div>
       </div>
+
 
      );
   }
