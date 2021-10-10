@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 import React from "react";
 import Logout from "../Logout/Logout";
+
 // import './NavBar.css';
 
 const NavBar = ({user}) => {
   return ( 
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container-fluid">
-          <span class="stylish">Exhausted Auto, your personal Auto Assistant</span>
+        <img src = '/ExhaustedAuto.png' alt="Exhausted Auto Logo" style={{width:80 }}/>
+          {/* <span class="stylish">Exhausted Auto, your personal Auto Assistant</span> */}
       </div>
   <ul class="navbar-nav me-auto">
       {user &&
