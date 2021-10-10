@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import AddService from './AddService';
+import { Link } from 'react-router-dom';
 
 class Services extends Component {
     constructor(props) {
@@ -49,7 +49,7 @@ class Services extends Component {
                         })}
                     </tbody>
                 </table>
-                <AddService/>
+                <Link to = {{pathname:'/add_service'}}>Add a Service to List </Link>
             </div>
         );
     }

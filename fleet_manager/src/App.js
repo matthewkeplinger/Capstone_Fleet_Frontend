@@ -6,11 +6,13 @@ import { Redirect } from 'react-router';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import Services from './components/Services/Services';
+import AddService from './components/Services/Services';
 import NavBar from './components/NavBar/NavBar';
 import Home from './components/Home/Home';
 import Garage from './components/Garage/Garage';
 import VehicleDetails from './components/VehicleDetail/VehicleDetail';
 import AddVehicle from './components/AddVehicle/AddVehicle';
+
 
 
 class App extends Component {
@@ -47,6 +49,7 @@ class App extends Component {
                 />
                 <Route exact path="/garage" component={Garage}/>
                 <Route path="/add_vehicle" component={AddVehicle}/>
+                <Route path="/add_service" component={AddService}/>
                 <Route path="/home" component={Home}/>
                 <Route path="/login" component={Login}/>
                 <Route path="/register" component={Register}/>
