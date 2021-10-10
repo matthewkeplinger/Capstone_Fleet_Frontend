@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-
+import ImageUploader from '../ImageUploader/ImageUploader';
 
 class AddVehicle extends Component {
     constructor(props) {
@@ -69,10 +69,13 @@ class AddVehicle extends Component {
                           <input name="vehicleVIN" onChange={this.handleChange} value={this.state.vehicleVIN}/>
                         <li><label>Maint. Cost to date</label></li>
                           <input name="vehicleMaintCost" onChange={this.handleChange} value={this.state.vehicleMaintCost}/>
+                          <li><label>Image of Vehicle</label></li>
+                          <ImageUploader />
                         <br /><br />
                         <ul><button type = "submit" class = "btn btn-success">Add Vehicle to my Garage</button></ul>
                         <li class="list-group-item d-flex justify-content-between align-items-center"><Link to = {{pathname: '/garage'}}> Back to Garage </Link></li>
                       </form>
+                      
                   </ul>
               </div>
           </div>

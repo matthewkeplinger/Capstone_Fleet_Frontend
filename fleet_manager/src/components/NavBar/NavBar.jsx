@@ -13,10 +13,14 @@ const NavBar = ({user}) => {
       {user &&
           <React.Fragment>
             <Link to = '/garage'>
-              <li class="nav-item" >My Garage</li>
+              <button type="button" class = "btn btn-link">
+                <li class="nav-item" >My Garage</li>
+              </button>
             </Link> 
             <Link to = '/services'>
-              <li class="nav-item">Services</li>
+              <button type="button" class = "btn btn-link">
+                <li class="nav-item">Services</li>
+              </button>
             </Link>  
             {/* <Link to = '/shopping_cart'>
               <li class="parent">ShoppingCart</li>
@@ -28,10 +32,14 @@ const NavBar = ({user}) => {
         <React.Fragment>
           
             <Link to = '/register'>
-              <li class="nav-item" >Register</li>
+              <button type="button" class= "btn btn-link">
+                <li class="nav-item" >Register</li>
+              </button>
             </Link>  
             <Link to = '/Login'>
-              <li class="nav-item">Login</li>
+              <button type="button" class = "btn btn-link">
+                <li class="nav-item">Login</li>
+              </button>
             </Link>
 
         </React.Fragment>  

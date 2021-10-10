@@ -45,14 +45,13 @@ class App extends Component {
                     }
                 }}
                 />
-                <Route path="/garage" component={Garage}/>
+                <Route exact path="/garage" component={Garage}/>
                 <Route path="/add_vehicle" component={AddVehicle}/>
                 <Route path="/home" component={Home}/>
                 <Route path="/login" component={Login}/>
                 <Route path="/register" component={Register}/>
                 <Route path="/services" component={Services}/>
                 <Route path="/vehicle_details" component={VehicleDetails}/>
-
             </Switch> 
         </div>
         )

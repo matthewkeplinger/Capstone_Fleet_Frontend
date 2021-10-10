@@ -7,7 +7,7 @@ const Logout = () => {
         console.log("Logged out")
     }
     return ( 
-            <button class="nav-link active" onClick={handleClick}>Logout</button>
+            <button type = "button" class="btn btn-link" onClick={handleClick}>Logout</button>
             
         );
 }
