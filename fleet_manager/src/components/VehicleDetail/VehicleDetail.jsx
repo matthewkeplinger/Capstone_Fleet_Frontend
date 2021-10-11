@@ -15,7 +15,7 @@ function VehicleDetails(props) {
                         {props.location.state.vehicles.map((element) =>
                         <>
                         <h4>{element.year} {element.make} {element.model}</h4>
-                        {/* <ImageUploader /> */}
+                        <ImageUploader />
                         <Image style={{ width:560 }} cloudName="dj6u5jy2g" publicId = {`https://res.cloudinary.com/dj6u5jy2g/image/upload/v1633894555/${element.image}`}/>
                         <h4>VIN: {element.VIN}</h4>
                         <h4>Mileage: {element.mileage}</h4>
