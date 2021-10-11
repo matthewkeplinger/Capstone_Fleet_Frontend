@@ -5,15 +5,16 @@ import {Image} from 'cloudinary-react';
 function ImageUploader() {
     const [imageSelected, setImageSelected] = useState("");
 
-    const uploadImage = () => {
+    const uploadImage = async () => {
         const formData = new FormData();
         formData.append("file", imageSelected);
         formData.append("upload_preset", "qoc0z1eq")
 
-        axios.post(
-            "https://api.cloudinary.com/v1_1/dj6u5jy2g/image/upload", formData).then((response) => {
-                console.log(response);
-        });
+        let response = await axios.post("https://api.cloudinary.com/v1_1/dj6u5jy2g/image/upload", formData);
+        console.log(response)
+        // constructor the put object
+        console.log(response.data.public_id)
+        let putResponse = await axios.put('', )
     };
     return (
         <div>
@@ -25,7 +26,7 @@ function ImageUploader() {
 
             {/* Could move this to vehicle Details; use URL as constant; add ID to DB;   */}
             {/* const imgURL = "" */}
-            <Image style={{ width:560 }} cloudName="dj6u5jy2g" publicId = "https://res.cloudinary.com/dj6u5jy2g/image/upload/v1633894555/yyzgvnnpydlnzkjtecme.jpg"/>
+            {/* <Image style={{ width:560 }} cloudName="dj6u5jy2g" publicId = "https://res.cloudinary.com/dj6u5jy2g/image/upload/v1633894555/yyzgvnnpydlnzkjtecme.jpg"/> */}
         </div>
     )
 }

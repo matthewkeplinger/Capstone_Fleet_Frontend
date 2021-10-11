@@ -3,7 +3,7 @@ const Logout = () => {
     
     const handleClick = () => {
         localStorage.clear();
-        window.location.href = '/';
+        window.location.href = '/login';
         console.log("Logged out")
     }
     return ( 

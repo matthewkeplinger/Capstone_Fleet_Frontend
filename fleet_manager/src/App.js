@@ -38,7 +38,8 @@ class App extends Component {
             <NavBar user = {user}/>   
             <Switch>
                 <Route
-                path ='/home'
+                path ='/'
+                exact
                 render = {props => {
                     if (!user){
                         return <Redirect to ="/login"/>
