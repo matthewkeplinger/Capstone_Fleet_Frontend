@@ -5,7 +5,8 @@ class ServiceRecords extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-           records: []
+           records: [],
+           filteredRecords:[]
          }
     }
     
@@ -20,18 +21,19 @@ class ServiceRecords extends Component {
             records: response.data
         });
         console.log(response.data)
-        console.log(this.props.vehicleID)
+        console.log("ServiceRecords prop" ,this.props.vehicleID)
     }
 
     render() { 
         let filteredRecords = this.state.records.filter(record => record.vehicle_id === this.props.vehicleID)
-        console.log(filteredRecords)
+        console.log("Filter Table" ,this.state.filteredRecords)
         return (
             
             <div>
                 <table class = "table table-hover">
                     <thead>
                         <tr>
+                            <th scope = 'col'>Vehicle ID </th>
                             <th scope = 'col'>Service:</th>
                             <th scope = 'col'>Mileage Performed</th>
                             <th scope = 'col'>Date Performed:</th>
@@ -41,6 +43,7 @@ class ServiceRecords extends Component {
                         {this.state.records.map((record)=> {
                             return (
                                 <tr class = "table-primary" key = {record.id}>
+                                    <td>{record.vehicle_id}</td>
                                     <td>{record.service_type}</td>
                                     <td>{record.mileage_performed}</td>
                                     <td>{record.date_performed}</td> 

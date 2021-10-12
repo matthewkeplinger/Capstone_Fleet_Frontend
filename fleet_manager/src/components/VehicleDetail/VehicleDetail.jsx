@@ -17,16 +17,17 @@ function VehicleDetails(props) {
                     <div class = "card-body">
                         {props.location.state.vehicles.map((element) =>
                         <>
-                        <h4>{element.year} {element.make} {element.model}</h4>
+                        <h2>{element.year} {element.make} {element.model}</h2>
                         <ImageUploader vehicleID = {vehicle_id} />
                         <Image style={{ width:560 }} cloudName="dj6u5jy2g" publicId = {`https://res.cloudinary.com/dj6u5jy2g/image/upload/v1633894555/${element.image}`}/>
                         <h4>VIN: {element.VIN}</h4>
                         <h4>Mileage: {element.mileage}</h4>
                         <h4>Color: {element.color}</h4>
-                        <h3>Services Required: </h3>
-                        <h3>Services Performed:</h3>
+                        <h3>Recommended Services: </h3>
+                        <h3>Service History:</h3>
                         <ServiceRecords vehicleID = {vehicle_id} />
                         <AddServiceRecord vehicleID = {vehicle_id}/>
+                        <br />
                         <Link to = {{pathname: '/garage'}}> Back to Garage </Link>
                         </>)}
                     </div>

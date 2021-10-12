@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-
+import './AddServiceRecord.css'
 
 
 class AddServiceRecord extends Component {
@@ -72,12 +72,12 @@ class AddServiceRecord extends Component {
                     <ul><label>Date Performed</label></ul>
                     <input type='date' name="datePerformed" onChange={this.handleChange} value={this.state.datePerformed}/><br /><br />
                     <ul class = "list-group"><button type = "submit" class = "btn btn-success">Add Service Record</button></ul>
-                    <ul class="list-group"><Link to = {{pathname: '/vehicle_details'}}> Back to Vehicle Details </Link></ul>
                     </form>
                 </ul>
             </div>
-            </div>
-          </div> 
+         </div>
+         </div>
+
 
          );
     }
