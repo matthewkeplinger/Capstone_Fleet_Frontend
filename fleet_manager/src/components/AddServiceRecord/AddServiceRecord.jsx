@@ -56,15 +56,15 @@ class AddServiceRecord extends Component {
         this.getAllServices();
     }
     render() { 
-        return (
-          <div class = "wrapperAddService">
+        return (        
+            <div class = "wrapperAddService">
             <div class="card text-white bg-secondary mb-3" style= {{maxWidth: 270}}>
             <div class="card-header"><h4 class = "card-title">Add a Service Record</h4></div>
               <div class="card-body">
                   <ul class="list-group">
                     <form className="form" onSubmit={this.handleSubmit}>
-                    <ul><label>Choose a Service:</label></ul>
                     <ul><select name="serviceID" onChange={this.handleChange} value={this.state.serviceID}>
+                                        <option value="" disabled>Choose a Service</option>
                                     {this.state.services.map(service=>
                                         <option value={service.id}>{service.service_type}</option>
                                     )};
@@ -78,10 +78,8 @@ class AddServiceRecord extends Component {
                     </form>
                 </ul>
             </div>
-         </div>
-         </div>
-
-
+            </div>
+            </div>
          );
     }
 }
