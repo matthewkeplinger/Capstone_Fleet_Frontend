@@ -63,8 +63,9 @@ class AddServiceRecord extends Component {
               <div class="card-body">
                   <ul class="list-group">
                     <form className="form" onSubmit={this.handleSubmit}>
+                    <ul><label>Service Selector:</label></ul>    
                     <ul><select name="serviceID" onChange={this.handleChange} value={this.state.serviceID}>
-                                        <option value="" disabled>Choose a Service</option>
+                                        <option value="">Choose a Service</option>
                                     {this.state.services.map(service=>
                                         <option value={service.id}>{service.service_type}</option>
                                     )};
