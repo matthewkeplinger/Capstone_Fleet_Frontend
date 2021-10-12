@@ -20,30 +20,28 @@ class ServiceRecords extends Component {
         this.setState({
             records: response.data
         });
-        console.log(response.data)
-        console.log("ServiceRecords prop" ,this.props.vehicleID)
     }
 
     render() { 
-        let filteredRecords = this.state.records.filter(record => record.vehicle_id === this.props.vehicleID)
-        console.log("Filter Table" ,this.state.filteredRecords)
+        //Filter the returned records by vehicle_id and return the values that match the props.vehicleID passed in from vehicle details
+        let recordsToFilter = this.state.records
+        let vehicleID = this.props.vehicleID
+        let filteredRecords = recordsToFilter.filter((record) => record.vehicle_id === vehicleID)
         return (
             
             <div>
                 <table class = "table table-hover">
                     <thead>
                         <tr>
-                            <th scope = 'col'>Vehicle ID </th>
                             <th scope = 'col'>Service:</th>
                             <th scope = 'col'>Mileage Performed</th>
                             <th scope = 'col'>Date Performed:</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {this.state.records.map((record)=> {
+                        {filteredRecords.map((record)=> {
                             return (
                                 <tr class = "table-primary" key = {record.id}>
-                                    <td>{record.vehicle_id}</td>
                                     <td>{record.service_type}</td>
                                     <td>{record.mileage_performed}</td>
                                     <td>{record.date_performed}</td> 
