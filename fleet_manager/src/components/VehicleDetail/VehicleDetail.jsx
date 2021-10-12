@@ -9,7 +9,7 @@ import './VehicleDetail.css'
 //Pull Vehicle info from garage to populate Vehicle Data
 function VehicleDetails(props) {
     let vehicle_id = props.location.state.vehicles[0].id
-    console.log(vehicle_id)
+    console.log("Vehicle Details: ",vehicle_id)
     return (
         <div class = "wrapperDetail">
             <div class="card text-white bg-primary mb-3" style= {{maxWidth: 650}}>

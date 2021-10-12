@@ -26,6 +26,7 @@ class AddServiceRecord extends Component {
             services: response.data
         });
         console.log(" AddServiceRecord: " ,this.state.services)
+        console.log("Vehicle ID", this.state.vehicleID)
     }
 
     handleChange=(event) =>{
@@ -45,12 +46,14 @@ class AddServiceRecord extends Component {
   
         }  
         // Post user to DB via function, axios call
+            console.log("Data to submit:", aServiceRecord)
           this.addNewRecord(aServiceRecord)
       };
     
       async addNewRecord(newRecord){
         const jwt= localStorage.getItem('token');
         await axios.post(`http://127.0.0.1:8000/api/records/`, newRecord, { headers: {Authorization: 'Bearer ' + jwt}}).then(response => {alert("Service Record Created")})
+        this.getAllServices();
     }
     render() { 
         return (
@@ -63,7 +66,7 @@ class AddServiceRecord extends Component {
                     <ul><label>Choose a Service:</label></ul>
                     <ul><select name="serviceID" onChange={this.handleChange} value={this.state.serviceID}>
                                     {this.state.services.map(service=>
-                                        <option key ={service.id} value={service.id}>{service.service_type}</option>
+                                        <option value={service.id}>{service.service_type}</option>
                                     )};
                     </select>  
                     </ul>
