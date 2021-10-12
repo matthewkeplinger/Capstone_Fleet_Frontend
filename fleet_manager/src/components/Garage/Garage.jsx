@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { Image } from 'cloudinary-react';
 
 
 class Garage extends Component {
@@ -31,6 +32,7 @@ class Garage extends Component {
                 <table class="table table-hover">
                     <thead>
                         <tr>
+                            <th scope = 'col'></th>
                             <th scope = 'col'>Vehicle</th>
                             <th scope = 'col'>Mileage</th>
                             <th scope = 'col'>License Plate</th>
@@ -44,6 +46,7 @@ class Garage extends Component {
                         {this.state.vehicles.map((vehicle)=> {
                             return (
                                 <tr class = "table-primary" key = {vehicle.id}>
+                                    <td><Image style={{ width:100 }} cloudName="dj6u5jy2g" publicId = {`https://res.cloudinary.com/dj6u5jy2g/image/upload/v1633894555/${vehicle.image}`}/></td>
                                     <td>{vehicle.year} {vehicle.make} {vehicle.model}</td>
                                     <td>{vehicle.mileage}</td>
                                     <td>{vehicle.license_plate}</td>
