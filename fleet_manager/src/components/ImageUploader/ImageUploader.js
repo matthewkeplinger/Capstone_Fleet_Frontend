@@ -4,7 +4,7 @@ import {Image} from 'cloudinary-react';
 
 function ImageUploader(props) {
     const [imageSelected, setImageSelected] = useState("");
-    let vehicle_id = props.vehicle.id
+    let vehicleID = props.vehicle_id
 
     const uploadImage = async () => {
         const formData = new FormData();
@@ -21,7 +21,7 @@ function ImageUploader(props) {
             'image' : response.data.public_id
         }
         const jwt= localStorage.getItem('token');
-        let putResponse = await axios.put(`http://127.0.0.1:8000/api/vehicles/update/${vehicle_id}/`, payload, { headers: {Authorization: 'Bearer ' + jwt}})
+        let putResponse = await axios.put(`http://127.0.0.1:8000/api/vehicles/update/${vehicleID}/`, payload, { headers: {Authorization: 'Bearer ' + jwt}})
     };
     return (
         <div>
@@ -30,10 +30,6 @@ function ImageUploader(props) {
             }}
             />
             <button type="button" class = "btn btn-link" onClick={uploadImage}>Upload Image</button>
-
-            {/* Could move this to vehicle Details; use URL as constant; add ID to DB;   */}
-            {/* const imgURL = "" */}
-            {/* <Image style={{ width:560 }} cloudName="dj6u5jy2g" publicId = "https://res.cloudinary.com/dj6u5jy2g/image/upload/v1633894555/yyzgvnnpydlnzkjtecme.jpg"/> */}
         </div>
     )
 }
