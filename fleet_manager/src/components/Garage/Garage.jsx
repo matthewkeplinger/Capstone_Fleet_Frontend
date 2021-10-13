@@ -37,7 +37,6 @@ class Garage extends Component {
                             <th scope = 'col'>Vehicle</th>
                             <th scope = 'col'>Mileage</th>
                             <th scope = 'col'>License Plate</th>
-                            <th scope = 'col'>Maintenance Cost to date</th>
                             <th scope = 'col'>Service Reminders:</th>
                             <th scope = 'col'></th>
 
@@ -51,7 +50,6 @@ class Garage extends Component {
                                     <td>{vehicle.year} {vehicle.make} {vehicle.model}</td>
                                     <td>{vehicle.mileage}</td>
                                     <td>{vehicle.license_plate}</td>
-                                    <td>{vehicle.maintenance_cost}</td>
                                     <td></td>
                                     <td><Link to = {{pathname: '/vehicle_details', state: {vehicles: [vehicle]}}}>Vehicle Details Page </Link></td>
                                 </tr>
