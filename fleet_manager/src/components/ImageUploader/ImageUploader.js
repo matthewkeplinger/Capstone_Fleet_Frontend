@@ -1,6 +1,5 @@
 import React , { useState }from 'react';
 import axios from 'axios';
-import {Image} from 'cloudinary-react';
 
 function ImageUploader(props) {
     const [imageSelected, setImageSelected] = useState("");
@@ -23,7 +22,7 @@ function ImageUploader(props) {
             'image' : response.data.public_id
         }
         const jwt= localStorage.getItem('token');
-        let putResponse = await axios.put(`http://127.0.0.1:8000/api/vehicles/image/${vehicleID}`, payload)
+        let putResponse = await axios.put(`http://127.0.0.1:8000/api/vehicles/image/${vehicleID}`, payload, { headers: {Authorization: 'Bearer ' + jwt}}).then(response => {alert("Service Record Created")})
 
         console.log(putResponse)
     };
