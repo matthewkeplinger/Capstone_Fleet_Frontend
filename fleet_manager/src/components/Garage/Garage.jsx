@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { Image } from 'cloudinary-react';
+import TechTips from '../TechTips/TechTips';
 
 
 class Garage extends Component {
@@ -60,6 +61,7 @@ class Garage extends Component {
                     </tbody>
                 </table>
                 <Link to = {{pathname: '/add_vehicle'}}>Add a Vehicle </Link>
+                <div><TechTips /></div>
             </div>
         );
     }

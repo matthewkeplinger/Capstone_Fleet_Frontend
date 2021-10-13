@@ -6,7 +6,8 @@ class ServiceRecords extends Component {
         super(props);
         this.state = { 
            records: [],
-           filteredRecords:[]
+           filteredRecords:[],
+           totalCost: 0
          }
     }
     
@@ -27,9 +28,14 @@ class ServiceRecords extends Component {
         let recordsToFilter = this.state.records
         let vehicleID = this.props.vehicleID
         let filteredRecords = recordsToFilter.filter((record) => record.vehicle_id === vehicleID)
+        console.log('Filtered Records:', filteredRecords)
+        let totalMaintCost = filteredRecords.reduce((total, CurrentValue) => total=total + CurrentValue.service_cost,0)
+        console.log("Total Maint Cost: ", totalMaintCost)
         return (
             
             <div>
+                <h4>Total Maintenance Cost to Date: {totalMaintCost}</h4><br /><br />
+                <h4>Service History</h4>
                 <table class = "table table-hover">
                     <thead>
                         <tr>
@@ -45,11 +51,11 @@ class ServiceRecords extends Component {
                                     <td>{record.service_type}</td>
                                     <td>{record.mileage_performed}</td>
                                     <td>{record.date_performed}</td> 
-                                </tr>    
+                                </tr> 
                             );
                         })}
                     </tbody>
-                </table>
+                </table> 
             </div>
         );
     }

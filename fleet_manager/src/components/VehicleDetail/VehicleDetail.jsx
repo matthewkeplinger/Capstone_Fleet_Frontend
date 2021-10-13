@@ -23,8 +23,6 @@ function VehicleDetails(props) {
                         <h4>VIN: {element.VIN}</h4>
                         <h4>Mileage: {element.mileage}</h4>
                         <h4>Color: {element.color}</h4>
-                        <h3>Recommended Services: </h3>
-                        <h3>Service History:</h3>
                         <ServiceRecords vehicleID = {vehicle_id} />
                         <AddServiceRecord vehicleID = {vehicle_id}/>
                         <br />
