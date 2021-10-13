@@ -50,8 +50,8 @@ class Garage extends Component {
                                     <td>{vehicle.year} {vehicle.make} {vehicle.model}</td>
                                     <td>{vehicle.mileage}</td>
                                     <td>{vehicle.license_plate}</td>
-                                    <td></td>
-                                    <td><Link to = {{pathname: '/vehicle_details', state: {vehicles: [vehicle]}}}>Vehicle Details Page </Link></td>
+                                    <td><span class = "badge rounded-pill bg-warning ">Coming Soon!</span></td>
+                                    <td><span class = "badge rounded-pill bg-secondary"><Link to = {{pathname: '/vehicle_details', state: {vehicles: [vehicle]}}}>Vehicle Details Page </Link></span></td>
                                 </tr>
 
                             );

@@ -35,7 +35,7 @@ class ServiceRecords extends Component {
             
             <div>
                 <h4>Total Maintenance Cost to Date: ${totalMaintCost}.00</h4>
-                <h8>*Maintenance cost is reflected over duration of vehicle ownership</h8>
+                <p class = "text-warning">*Maintenance cost is reflected over duration of vehicle ownership</p>
                 <br /><br />
                 <h4>Service History</h4>
                 <table class = "table table-hover">
