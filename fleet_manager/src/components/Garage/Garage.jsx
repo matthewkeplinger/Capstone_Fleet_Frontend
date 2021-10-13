@@ -58,8 +58,11 @@ class Garage extends Component {
                         })}
                     </tbody>
                 </table>
+                
                 <Link to = {{pathname: '/add_vehicle'}}>Add a Vehicle </Link>
-                <div><TechTips /></div>
+                <div>
+                    <TechTips />
+                </div>
             </div>
         );
     }

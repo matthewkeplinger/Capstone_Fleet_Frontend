@@ -4,7 +4,8 @@ import {Image} from 'cloudinary-react';
 
 function ImageUploader(props) {
     const [imageSelected, setImageSelected] = useState("");
-    let vehicleID = props.vehicle_id
+    let vehicleID = props.vehicleID
+    console.log("Image Vehicle ID", vehicleID)
 
 
     const uploadImage = async () => {
@@ -22,7 +23,9 @@ function ImageUploader(props) {
             'image' : response.data.public_id
         }
         const jwt= localStorage.getItem('token');
-        let putResponse = await axios.put(`http://127.0.0.1:8000/api/vehicles/update/${vehicleID}/`, payload, { headers: {Authorization: 'Bearer ' + jwt}})
+        let putResponse = await axios.put(`http://127.0.0.1:8000/api/vehicles/image/${vehicleID}`, payload)
+
+        console.log(putResponse)
     };
     return (
         <div>
