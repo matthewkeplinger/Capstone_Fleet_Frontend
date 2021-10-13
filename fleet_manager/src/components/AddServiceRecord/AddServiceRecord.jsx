@@ -64,13 +64,12 @@ class AddServiceRecord extends Component {
                   <ul class="list-group">
                     <form className="form" onSubmit={this.handleSubmit}>
                     <ul><label>Service Selector:</label></ul>    
-                    <ul><select name="serviceID" onChange={this.handleChange} value={this.state.serviceID}>
+                    <select name="serviceID" onChange={this.handleChange} value={this.state.serviceID}>
                                         <option value="">Choose a Service</option>
                                     {this.state.services.map(service=>
                                         <option value={service.id}>{service.service_type}</option>
                                     )};
                     </select>  
-                    </ul>
                     <ul><label>Mileage Performed</label></ul>
                     <input name="mileagePerformed" onChange={this.handleChange} value={this.state.mileagePerformed}/>
                     <ul><label>Date Performed</label></ul>
