@@ -24,8 +24,6 @@ class AddServiceRecord extends Component {
         this.setState({
             services: response.data
         });
-        console.log(" AddServiceRecord: " ,this.state.services)
-        console.log("Vehicle ID", this.state.vehicleID)
     }
 
     handleChange=(event) =>{

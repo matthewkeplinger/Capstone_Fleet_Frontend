@@ -47,11 +47,11 @@ class Garage extends Component {
                             return (
                                 <tr class = "table-primary" key = {vehicle.id}>
                                     <td><Image style={{ width:100 }} cloudName="dj6u5jy2g" publicId = {`https://res.cloudinary.com/dj6u5jy2g/image/upload/v1633894555/${vehicle.image}`}/></td>
-                                    <td>{vehicle.year} {vehicle.make} {vehicle.model}</td>
-                                    <td>{vehicle.mileage}</td>
-                                    <td>{vehicle.license_plate}</td>
-                                    <td><span class = "badge rounded-pill bg-warning ">Coming Soon!</span></td>
-                                    <td><span class = "badge rounded-pill bg-secondary"><Link to = {{pathname: '/vehicle_details', state: {vehicles: [vehicle]}}}>Vehicle Details Page </Link></span></td>
+                                    <td><h4>{vehicle.year} {vehicle.make} {vehicle.model}</h4></td>
+                                    <td><h4>{vehicle.mileage}</h4></td>
+                                    <td><h4>{vehicle.license_plate}</h4></td>
+                                    <td><span class = "badge rounded-pill bg-warning "><h6>Coming Soon!</h6></span></td>
+                                    <td><span class = "badge rounded-pill bg-secondary"><Link to = {{pathname: '/vehicle_details', state: {vehicles: [vehicle]}}}><h6>Vehicle Details Page</h6> </Link></span></td>
                                 </tr>
 
                             );
@@ -59,7 +59,7 @@ class Garage extends Component {
                     </tbody>
                 </table>
                 
-                <Link to = {{pathname: '/add_vehicle'}}>Add a Vehicle </Link>
+                <Link to = {{pathname: '/add_vehicle'}}><h4>Add a Vehicle </h4></Link>
                 <div>
                     <TechTips />
                 </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ServiceRecords from '../ServiceRecords/ServiceRecords';
 import AddServiceRecord from '../AddServiceRecord/AddServiceRecord';
+import ServiceReminder from '../ServiceReminder/ServiceReminder';
 import ImageUploader from '../ImageUploader/ImageUploader';
 import { Image } from 'cloudinary-react';
 import './VehicleDetail.css'
@@ -9,7 +10,11 @@ import './VehicleDetail.css'
 //Pull Vehicle info from garage to populate Vehicle Data
 function VehicleDetails(props) {
     let vehicle_id = props.location.state.vehicles[0].id
-    console.log("Vehicle Details: ",vehicle_id)
+    let vehicle_mileage=props.location.state.vehicles[0].mileage
+
+
+
+
     return (
         <div class = "wrapperDetail">
             <div class="card text-white bg-primary mb-3" style= {{maxWidth: 650}}>
@@ -24,6 +29,7 @@ function VehicleDetails(props) {
                         <h4>Mileage: {element.mileage}</h4>
                         <h4>Color: {element.color}</h4>
                         <ServiceRecords vehicleID = {vehicle_id} />
+                        <ServiceReminder vehicleID = {vehicle_id} vehicleMileage = {vehicle_mileage} />
                         <AddServiceRecord vehicleID = {vehicle_id}/>
                         <br />
                         <Link to = {{pathname: '/garage'}}> Back to Garage </Link>

@@ -4,7 +4,6 @@ import axios from 'axios';
 function ImageUploader(props) {
     const [imageSelected, setImageSelected] = useState("");
     let vehicleID = props.vehicleID
-    console.log("Image Vehicle ID", vehicleID)
 
 
     const uploadImage = async () => {
@@ -23,8 +22,6 @@ function ImageUploader(props) {
         }
         const jwt= localStorage.getItem('token');
         let putResponse = await axios.put(`http://127.0.0.1:8000/api/vehicles/image/${vehicleID}`, payload, { headers: {Authorization: 'Bearer ' + jwt}}).then(response => {alert("Service Record Created")})
-
-        console.log(putResponse)
     };
     return (
         <div>
