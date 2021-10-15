@@ -29,16 +29,16 @@ class ServiceReminder extends Component {
         console.log("Mileage Check method")
         console.log("Mileage In:", mileage)
         console.log("RecordSet In:", recordSet)
-        console.log("recordSet Index 0:", recordSet[0])
         let requiredServices = this.state.requiredServices
         //somehow loop over set
+        // requiredServices.forEach(element => console.log(element.mileage_interval));
 
-
-        let vehicleServiceInterval = parseInt(mileage) - parseInt(recordSet.mileage_performed)
+        let vehicleServiceInterval = parseInt(mileage) - parseInt(recordSet[0].mileage_performed)
         console.log('vehicleServiceInterval value:', vehicleServiceInterval)
         if (vehicleServiceInterval > recordSet.mileage_interval){
-            //Need to do something here,
-            requiredServices.push(recordSet.service_type)
+        
+        //Need to do something here,
+        requiredServices.push(recordSet.service_type)
             
         }
 

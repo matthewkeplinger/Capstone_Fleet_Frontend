@@ -11,6 +11,7 @@ import './VehicleDetail.css'
 function VehicleDetails(props) {
     let vehicle_id = props.location.state.vehicles[0].id
     let vehicle_mileage=props.location.state.vehicles[0].mileage
+    let vehicle_image = props.location.state.vehicles[0].image
 
 
 
@@ -23,13 +24,13 @@ function VehicleDetails(props) {
                         {props.location.state.vehicles.map((element) =>
                         <>
                         <h2>{element.year} {element.make} {element.model}</h2>
-                        <ImageUploader vehicleID = {element.id} />
+                        <ImageUploader vehicleID = {element.id} vehicleImage = {element.image} />
                         <Image style={{ width:560 }} cloudName="dj6u5jy2g" publicId = {`https://res.cloudinary.com/dj6u5jy2g/image/upload/v1633894555/${element.image}`}/>
                         <h4>VIN: {element.VIN}</h4>
                         <h4>Mileage: {element.mileage}</h4>
                         <h4>Color: {element.color}</h4>
                         <ServiceRecords vehicleID = {vehicle_id} />
-                        <ServiceReminder vehicleID = {vehicle_id} vehicleMileage = {vehicle_mileage} />
+                        {/* <ServiceReminder vehicleID = {vehicle_id} vehicleMileage = {vehicle_mileage} /> */}
                         <AddServiceRecord vehicleID = {vehicle_id}/>
                         <br />
                         <Link to = {{pathname: '/garage'}}> Back to Garage </Link>

@@ -24,9 +24,6 @@ const NavBar = ({user}) => {
                 <li class="nav-item">Vehicle Services</li>
               </button>
             </Link>  
-            {/* <Link to = '/shopping_cart'>
-              <li class="parent">ShoppingCart</li>
-            </Link> */}
             <li><Logout/></li>
             </React.Fragment>
             }
