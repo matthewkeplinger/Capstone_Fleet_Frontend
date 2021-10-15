@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { Image } from 'cloudinary-react';
 import TechTips from '../TechTips/TechTips';
+import GarageServiceReminder from '../GarageServiceReminder/GarageServiceReminder';
 
 
 class Garage extends Component {
@@ -50,7 +51,7 @@ class Garage extends Component {
                                     <td><h4>{vehicle.year} {vehicle.make} {vehicle.model}</h4></td>
                                     <td><h4>{vehicle.mileage}</h4></td>
                                     <td><h4>{vehicle.license_plate}</h4></td>
-                                    <td><span class = "badge rounded-pill bg-warning "><h6>Coming Soon!</h6></span></td>
+                                    <td><GarageServiceReminder vehicleID = {vehicle.id} vehicleMileage = {vehicle.mileage} /></td>
                                     <td><span class = "badge rounded-pill bg-secondary"><Link to = {{pathname: '/vehicle_details', state: {vehicles: [vehicle]}}}><h6>Vehicle Details Page</h6> </Link></span></td>
                                 </tr>
 
