@@ -49,19 +49,11 @@ class GarageServiceReminder extends Component {
 
         return ( 
             <div>
-                        {this.state.requiredServices.map((record)=> {
-                            return (
-                                // <tr class = "table-primary" key = {record.id}>
-                                //     <td>{record}</td>
-                                    <span class = "badge rounded-pill bg-warning "><h6>{record}</h6></span>
-                                    /* <td>${record.service_cost}.00</td>
-                                    <td>{record.mileage_interval} miles</td>  */
-                                // </tr> 
-                           );
-                        })}
-                       
-                       
-
+                {this.state.requiredServices.map((record)=> {
+                return (          
+                        <span class = "badge rounded-pill bg-warning "><h6>{record}</h6></span>
+                );
+            })}
             </div>
         );
     }
