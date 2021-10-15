@@ -1,6 +1,10 @@
 # Capstone_Fleet_Frontend
-React.js front-end for a basic fleet-management application designed for a small business or private sportsman.  
-The basic functionality is to add a vehicle, add services, and track general maintenance with costing.
+This is a React.js application to allow an end-user to build a virtual garage and track the required services for their vehicle.  
+Users can Add a vehicle, Add services, Add service records for the vehicle, as well as see reminders of when services are due or overdue.  
+Users can also upload an image of the vehicle. 
+Styling comes from bootstrap and npm packages.  
+
+The backend of this project is a MySQL DB with Django APIs utilizing Django-rest-framework.  
 
 ![Register](https://user-images.githubusercontent.com/24422068/137525588-b92bede3-fd3d-4ccc-8d2e-befb4a0df92f.PNG)
 ![Login](https://user-images.githubusercontent.com/24422068/137525590-d1c20677-1de3-4415-8032-b2731a8c8c50.PNG)
