@@ -54,7 +54,9 @@ class ServiceRecords extends Component {
                         <tr>
                             <th scope = 'col'>Service:</th>
                             <th scope = 'col'>Mileage Performed</th>
-                            <th scope = 'col'>Date Performed:</th>
+                            <th scope = 'col'>Date Performed</th>
+                            <th scope = 'col'>Recommended Interval</th>
+                            <th scope = 'col'>Estimated Cost</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -64,6 +66,8 @@ class ServiceRecords extends Component {
                                     <td>{record.service_type}</td>
                                     <td>{record.mileage_performed}</td>
                                     <td>{record.date_performed}</td> 
+                                    <td>{record.mileage_interval} miles</td>
+                                    <td>${record.service_cost}.00</td>
                                 </tr> 
                             );
                         })}

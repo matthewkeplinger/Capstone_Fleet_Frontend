@@ -50,6 +50,7 @@ class ServiceReminder extends Component {
         return ( 
             <div>
                 <h4>Services Required</h4>
+                <p class = "text-warning">*Reminders are based off services already conducted for this vehicle, not the entirety of the service catalog</p>
                 <table class = "table table-hover">
                     <thead>
                         <tr>
