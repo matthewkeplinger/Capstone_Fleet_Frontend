@@ -38,7 +38,7 @@ class Garage extends Component {
                             <th scope = 'col'>Vehicle</th>
                             <th scope = 'col'>Mileage</th>
                             <th scope = 'col'>License Plate</th>
-                            <th scope = 'col'>Service Reminders:</th>
+                            <th scope = 'col'>Services Required:</th>
                             <th scope = 'col'></th>
 
                         </tr>
