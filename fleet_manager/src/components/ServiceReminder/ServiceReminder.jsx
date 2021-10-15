@@ -21,44 +21,31 @@ class ServiceReminder extends Component {
         this.setState({
             records: response.data
         });
+        if (response.data) {
+            let recordsToFilter = response.data
+            let vehicleID = this.props.vehicleID
+            let mileage = this.props.vehicleMileage
+            let recordSet = recordsToFilter.filter((record) => record.vehicle_id === vehicleID)
+            console.log('recordSet', recordSet)
+            recordSet.map((record) => {
+                console.log("internal map function", record.mileage_performed)
+                let vehicleServiceInterval = mileage - record.mileage_performed
+                console.log('vehicleServiceInterval value:', vehicleServiceInterval)
+                if (vehicleServiceInterval > record.mileage_interval){
+                    this.setState({
+                        requiredServices: [...this.state.requiredServices, record.service_type]
+                    })
+                    console.log('this.state.requiredServices', this.state.requiredServices)
+                    return record.service_type;
+                }
+            })
+            
+            let requiredServices = this.state.requiredServices
+            console.log('ServiceReminder Required Services' ,requiredServices)
+        }
     }
     
-    //Bring in vehicle mileage and the mileage from the service record, then compare the difference to the service interval
-    //if interval is smaller, inform user that the service is required
-    mileageCheck(mileage, recordSet){
-        console.log("Mileage Check method")
-        console.log("Mileage In:", mileage)
-        console.log("RecordSet In:", recordSet)
-        let requiredServices = this.state.requiredServices
-        //somehow loop over set
-        // requiredServices.forEach(element => console.log(element.mileage_interval));
-
-        let vehicleServiceInterval = parseInt(mileage) - parseInt(recordSet[0].mileage_performed)
-        console.log('vehicleServiceInterval value:', vehicleServiceInterval)
-        if (vehicleServiceInterval > recordSet.mileage_interval){
-        
-        //Need to do something here,
-        requiredServices.push(recordSet.service_type)
-            
-        }
-
-    }
-
     render() { 
-
-        
-        //Filter the returned records by vehicle_id and return the values that match the props.vehicleID passed in from vehicle details
-        let recordsToFilter = this.state.records
-        let vehicleID = this.props.vehicleID
-        let vehicleMileage = this.props.vehicleMileage
-
-        let filteredRecords = recordsToFilter.filter((record) => record.vehicle_id === vehicleID)
-
-        //Call mileage check to see if vehicle mileage-mileage the service was performed is greater than the service interval
-        this.mileageCheck(vehicleMileage, filteredRecords)
-        
-        let requiredServices = this.state.requiredServices
-        console.log('ServiceReminder Required Services' ,requiredServices)
 
         return ( 
             <div>
@@ -67,17 +54,17 @@ class ServiceReminder extends Component {
                     <thead>
                         <tr>
                             <th scope = 'col'>Service:</th>
-                            <th scope = 'col'>Service Cost</th>
-                            <th scope = 'col'>Interval between services</th>
+                            {/* <th scope = 'col'>Service Cost</th>
+                            <th scope = 'col'>Interval between services</th> */}
                         </tr>
                     </thead>
                     <tbody>
-                        {requiredServices.map((record)=> {
+                        {this.state.requiredServices.map((record)=> {
                             return (
                                 <tr class = "table-primary" key = {record.id}>
-                                    <td>{record.service_type}</td>
-                                    <td>${record.service_cost}.00</td>
-                                    <td>{record.mileage_interval} miles</td> 
+                                    <td>{record}</td>
+                                    {/* <td>${record.service_cost}.00</td>
+                                    <td>{record.mileage_interval} miles</td>  */}
                                 </tr> 
                             );
                         })}

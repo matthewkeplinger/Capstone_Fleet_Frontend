@@ -30,7 +30,7 @@ function VehicleDetails(props) {
                         <h4>Mileage: {element.mileage}</h4>
                         <h4>Color: {element.color}</h4>
                         <ServiceRecords vehicleID = {vehicle_id} />
-                        {/* <ServiceReminder vehicleID = {vehicle_id} vehicleMileage = {vehicle_mileage} /> */}
+                        <ServiceReminder vehicleID = {vehicle_id} vehicleMileage = {element.mileage} />
                         <AddServiceRecord vehicleID = {vehicle_id}/>
                         <br />
                         <Link to = {{pathname: '/garage'}}> Back to Garage </Link>
